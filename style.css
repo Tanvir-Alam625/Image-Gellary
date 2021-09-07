@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 20px;
+}
+.header{
+margin: 35px 0 ;
+width: 100%;
+text-align: center;
+
+}
+.header h2{
+    font-size: 35px;
+    color: purple;
+    font-weight: 600;
+    line-height: 30px;
+    display: inline-block;
+    padding: 10px 50px;
+    position: relative;
+
+}
+.header h2::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    top: 50%;
+    right: -7%;
+    background: purple;
+    border-radius: 50px;
+
+}
+
+.header h2::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    top: 50%;
+    left: -7%;
+    background: purple;
+    border-radius: 50px;
+}
+.items1{
+    position: relative;
+    overflow: hidden;
+
+
+}
+img{
+    margin: 0;
+    padding: 0;
+}
+
+.hover_content{
+    position: absolute;
+    right: 600px;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    z-index: 2;
+    display: block;
+    align-items: center;
+    text-align: center;
+    transform-origin: right;
+    transition: 300ms ease-in-out;
+    transform-style: preserve-3d
+}
+.hover_content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+    z-index: -1;
+    
+   
+}
+.items1:hover .hover_content,
+.items1:focus .hover_content{
+    right: 0;
+}
+.hover_content h4,
+.hover_content p{
+    letter-spacing: 1px; 
+}
+.hover_content button{
+    padding: 5px 20px;
+    border: 0;
+    outline: none;
+    border: 2px solid purple;
+    border-radius: 5px;
+    position: relative;
+    color: #fff;
+    letter-spacing: 1px;
+    background: transparent;
+    font-size: 18px;
+    z-index: 1;
+    
+    
+}
+.hover_content button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100px;
+    left: 0;
+    background: purple;
+    transition: 300ms ease-in-out;
+    z-index: -1;
+}
+.hover_content button:hover::before,
+.hover_content button:focus::before{
+    right: 0;
+
+}
